@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-if [[ -z "$1" || -z "$2" ]]; then
+if [ -z "$1" ] || [ -z "$2" ]; then
     echo "error: 2 args required"
     echo "Usage : $0 <filesdir> <searchstr>"
     exit 1
@@ -9,7 +9,7 @@ fi
 filesdir="$1"
 searchstr="$2"
 
-if [[ ! -d "$filesdir" ]]; then
+if [ ! -d "$filesdir" ]; then
     echo "error: '$filesdir' is not a directory"
     exit 1
 fi
